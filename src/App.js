@@ -2,16 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 const magazines = [
-  { id: 1, title: 'Second Hand News', theme: 'architecture', isAvailable: true },
-  { id: 2, title: 'Never Going Back Again', theme: 'architecture', isAvailable: true },
-  { id: 3, title: 'Dont Stop', theme: 'design', isAvailable: true },
-  { id: 4, title: 'Go Your Own Way', theme: 'design', isAvailable: true },
-  { id: 5, title: 'Songbird', theme: 'design', isAvailable: true },
-  { id: 6, title: 'The Chain', theme: 'design', isAvailable: true },
-  { id: 7, title: 'You Make Loving Fun', theme: 'design', isAvailable: true },
-  { id: 8, title: 'I Dont Want to Know', theme: 'design', isAvailable: true },
-  { id: 9, title: 'Oh Daddy', theme: 'design', isAvailable: true },
-  { id: 10, title: 'Gold Dust Woman', theme: 'design', isAvailable: true },
+  { id: 1, title: 'Second Hand News', isAvailable: true },
+  { id: 2, title: 'Never Going Back Again', isAvailable: true },
+  { id: 3, title: 'Dont Stop', isAvailable: true },
+  { id: 4, title: 'Go Your Own Way', isAvailable: true },
+  { id: 5, title: 'Songbird', isAvailable: true },
+  { id: 6, title: 'The Chain', isAvailable: true },
+  { id: 7, title: 'You Make Loving Fun', isAvailable: true },
+  { id: 8, title: 'I Dont Want to Know', isAvailable: true },
+  { id: 9, title: 'Oh Daddy', isAvailable: true },
+  { id: 10, title: 'Gold Dust Woman', isAvailable: true },
 ];
 
 function SongList() {
