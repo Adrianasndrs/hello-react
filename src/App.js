@@ -1,30 +1,93 @@
 import logo from './logo.svg';
 import './App.css';
 
+const magazines = [
+  { id: 1, title: 'Second Hand News', theme: 'architecture', isAvailable: true },
+  { id: 2, title: 'Never Going Back Again', theme: 'architecture', isAvailable: true },
+  { id: 3, title: 'Dont Stop', theme: 'design', isAvailable: true },
+  { id: 4, title: 'Go Your Own Way', theme: 'design', isAvailable: true },
+  { id: 5, title: 'Songbird', theme: 'design', isAvailable: true },
+  { id: 6, title: 'The Chain', theme: 'design', isAvailable: true },
+  { id: 7, title: 'You Make Loving Fun', theme: 'design', isAvailable: true },
+  { id: 8, title: 'I Dont Want to Know', theme: 'design', isAvailable: true },
+  { id: 9, title: 'Oh Daddy', theme: 'design', isAvailable: true },
+  { id: 10, title: 'Gold Dust Woman', theme: 'design', isAvailable: true },
+];
+
+function SongList() {
+  const listZines = magazines.map(song =>
+    <p
+      key={song.id}
+      style={{
+        color: song.isAvailable ? 'white' : 'red'
+      }}
+    >
+      {song.id }
+      {song.title}
+    </p>
+  );
+  return (
+      <p>{listZines}</p>
+  )
+}
+
+
+const album = {
+  title: 'Rumors',
+  artist: 'Fleetwood Mac',
+  published: '1977',
+  image: 'https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG',
+  width: '264',
+  height: '378'
+};
+
+
+function Musicshelf() {
+  return (
+    <div>
+      {/* Components can't return multiple JSX tags unless they are wrapped in a parent element */}
+      {/* This is a JSX comment */}
+      <h2>{album.title} ({album.published})</h2>
+      <p>{album.artist}</p>
+      {/* This a conditional that checks if an image exists before displaying it */}
+      {album.image &&
+      <img
+        className="albumCover"
+        src={album.image}
+        alt={album.title + ' cover'}
+        style={{
+          width: album.width,
+          height: album.height
+        }}
+      />
+      }
+    </div>
+  );
+}
+
+  
 function MagicButton() {
   return(
-    <button>Magic</button>
+    <>
+    <h3>This is a magic button</h3>
+
+    <button onClick={sing}>Magic</button>
+    </>
   )
+}
+
+function sing() {
+  alert('You can go your own way!');
 }
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React at MSU! 
-        </a>
+        <Musicshelf />
+        <SongList />
+        <MagicButton />
       </header>
-      <MagicButton />
     </div>
   );
 }
