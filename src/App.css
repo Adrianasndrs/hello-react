@@ -1,3 +1,19 @@
+table{
+  border-collapse: separate;
+
+}
+
+tr{
+  color: rgb(255, 226, 231);
+}
+
+td{
+  border: 3px solid black;
+  padding: 0.5rem;
+  text-align: left;
+
+}
+
 .App {
   text-align: center;
 }
